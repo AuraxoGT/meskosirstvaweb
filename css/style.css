@@ -794,6 +794,8 @@ footer{
     justify-content: center; /* Vertical center */
     text-align: center; /* Center the text */
     height: 100vh; /* Full viewport height */
+    padding: 20px;
+        text-align: center;
 }
 
 #about h2 {
@@ -905,5 +907,139 @@ footer{
     height: 100px;
     border-radius: 50%;
     margin-bottom: 15px;
+  }
+  /* Overlay behind the popup */
+.overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    z-index: 999; /* Behind the popup */
+    backdrop-filter: blur(10px); /* Apply blur effect behind the popup */
+    pointer-events: none; /* Prevent interaction with elements behind the overlay */
+  }
+  
+  /* Popup */
+  .popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Content of the popup */
+  .popup-content {
+    text-align: center;
+  }
+  
+  .popup-content h2 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .popup-content p {
+    color: #ccc;
+  }
+  
+  /* Close button */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #ff0000;
+  }
+  
+  /* Avatar in the popup */
+  .popup-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+ 
+  /* Overlay behind the popup */
+.overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    z-index: 999; /* Behind the popup */
+    backdrop-filter: blur(10px); /* Apply blur effect to the background behind the popup */
+    pointer-events: none; /* Prevent interaction with elements behind the overlay */
+  }
+  
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    z-index: 1000; /* Above the overlay */
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Center-align content */
+  }
+  
+  /* Content of the popup */
+  .popup-content {
+    display: flex;
+    flex-direction: column; /* Arrange elements in a column */
+    align-items: center; /* Center the items */
+  }
+  
+  .popup-content h2 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .popup-content p {
+    color: #ccc;
+  }
+  
+  /* Avatar in the popup - Positioned at the top */
+  .popup-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px; /* Space between avatar and other content */
+  }
+  
+  /* Close button */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #ff0000;
   }
   

@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function showPopup(profileName) {
   const popup = document.getElementById('popup');
+  const overlay = document.getElementById('overlay');
   const title = document.getElementById('popup-title');
   const info = document.getElementById('popup-info');
   const avatar = document.getElementById('popup-avatar');
@@ -64,31 +65,31 @@ function showPopup(profileName) {
       info.innerText = 'Co-Owner and Developer of the community ';
       avatar.src = 'https://cdn.discordapp.com/avatars/959449311366766622/a_fab1d9756cd37bedd5ea81b4f2a893d4.gif?size=1024&width=460&height=460';
       break;
-      case 'Retro_Drive':
+    case 'Retro_Drive':
       title.innerText = 'Retro_Drive';
       info.innerText = 'Head Admin responsible for other admins';
       avatar.src = 'https://cdn.discordapp.com/avatars/655728571016544277/a_031958c325e1a7b792ae41e62dab20a6.gif?size=1024&width=460&height=460';
       break;
-      case 'Spixrit':
-        title.innerText = 'Spixrit';
-        info.innerText = 'Admin and helper in the community development';
-        avatar.src = 'https://cdn.discordapp.com/avatars/640523849250766868/a_7715a77635bd630dc02190dbdd3c77a4.gif?size=1024&width=460&height=460';
-        break;
-        case 'Civilis':
-        title.innerText = 'Civilis';
-        info.innerText = 'Head moderator and caretaker of the community';
-        avatar.src = 'https://cdn.discordapp.com/avatars/495602170507296778/4991a3194c2fdfc6939deb08acf0936f.webp?size=1024&width=460&height=460';
-        break;
-        case 'Smaqknick':
-          title.innerText = 'Smaqknick';
-          info.innerText = 'Head moderator and caretaker of the community';
-          avatar.src = 'https://cdn.discordapp.com/avatars/305216084330545152/f497834f9d4507b3f036dae8740e3aca.webp?size=1024&width=460&height=460';
-          break;
-          case 'Ghosty':
-          title.innerText = 'Ghosty';
-          info.innerText = 'Moderator and best friend of Meška';
-          avatar.src = 'https://cdn.discordapp.com/avatars/724278530581463120/7fe5d7c19cfdb69e705d8a516328d202.webp?size=1024&width=460&height=460';
-          break
+    case 'Spixrit':
+      title.innerText = 'Spixrit';
+      info.innerText = 'Admin and helper in the community development';
+      avatar.src = 'https://cdn.discordapp.com/avatars/640523849250766868/a_7715a77635bd630dc02190dbdd3c77a4.gif?size=1024&width=460&height=460';
+      break;
+    case 'Civilis':
+      title.innerText = 'Civilis';
+      info.innerText = 'Head moderator and caretaker of the community';
+      avatar.src = 'https://cdn.discordapp.com/avatars/495602170507296778/4991a3194c2fdfc6939deb08acf0936f.webp?size=1024&width=460&height=460';
+      break;
+    case 'Smaqknick':
+      title.innerText = 'Smaqknick';
+      info.innerText = 'Head moderator and caretaker of the community';
+      avatar.src = 'https://cdn.discordapp.com/avatars/305216084330545152/f497834f9d4507b3f036dae8740e3aca.webp?size=1024&width=460&height=460';
+      break;
+    case 'Ghosty':
+      title.innerText = 'Ghosty';
+      info.innerText = 'Moderator and best friend of Meška';
+      avatar.src = 'https://cdn.discordapp.com/avatars/724278530581463120/7fe5d7c19cfdb69e705d8a516328d202.webp?size=1024&width=460&height=460';
+      break;
     // Add more cases for other profiles
     default:
       title.innerText = profileName;
@@ -96,9 +97,20 @@ function showPopup(profileName) {
       avatar.src = ''; // Default or placeholder avatar
   }
 
+  // Show the popup and overlay (which will blur the background)
   popup.style.display = 'block';
+  overlay.style.display = 'block';
+
+  document.body.style.overflow = 'hidden'; // Disable scrolling when popup is visible
 }
 
 function hidePopup() {
-  document.getElementById('popup').style.display = 'none';
+  const popup = document.getElementById('popup');
+  const overlay = document.getElementById('overlay');
+  
+  // Hide the popup and overlay
+  popup.style.display = 'none';
+  overlay.style.display = 'none';
+
+  document.body.style.overflow = 'auto'; // Re-enable scrolling when popup is hidden
 }
