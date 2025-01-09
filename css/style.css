@@ -1042,4 +1042,6 @@ footer{
   .close:hover {
     color: #ff0000;
   }
-  
+  .toolbar img, .toolbar i {
+  margin-right: 8px;
+}
