@@ -63,7 +63,7 @@ function showPopup(profileName) {
     case 'AuraxoGT':
       title.innerText = 'AuraxoGT';
       info.innerText = 'Co-Owner and Developer of the community ';
-      avatar.src = 'https://cdn.discordapp.com/avatars/959449311366766622/a_56185eba70163032496b4a2530e6c35e.gif?size=1024';
+      avatar.src = 'https://cdn.discordapp.com/avatars/959449311366766622/a_f9d11c332cc3542f3787e8017e2e92f7.gif?size=1024';
       break;
     case 'Retro_Drive':
       title.innerText = 'Retro_Drive';
